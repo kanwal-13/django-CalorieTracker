@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h1 class='headline text-center'> login </h1>
+    <div class="register">
+    <form method="post" class="login-form">
+      {% csrf_token %}
+      <div class="form-group mx-5">
+        <label for="formGroupExampleInput">Username</label>
+        <input type="text" id="formGroupExampleInput" name = "username" >
+      </div>
+      <br>
+        <div class="form-group mx-5">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" id="exampleInputPassword1" name = "password" >
+        </div>
+        <br>
+        <button type="submit" class="btn btn-danger btn-lg"> Submit </button>
+      </form>
+
+      <br>{% for message in messages %}
+        <p id="messages">
+            <center>{{message}}</center>
+        </p>
+        {% endfor %}
+
+        <div class="pt-8">
+            <div class="d-flex justify-content-center links pt-5">
+                Don't have an account?
+                <a href="/register" class="ml-2"><button type="submit" class="btn btn-danger btn-lg">
+                    Sign Up</button></a>
+            </div>
+        </div>
+        <br><br>
+      </div>
+</div>
+{% endblock content %}

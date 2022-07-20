@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block content %}
+<div class="bg">
+    <div class="container-fluid">
+        <br><br>
+        <div class="row mb-4">
+            <div class="col">
+                <center>
+                    <div class="addfood">
+                        <center>
+                        <div>
+                            <h1 class="headline text-center">Select Food</h1>
+                        </div>
+                        <form method="POST" action="" class="login-form form-inline">
+                            {% csrf_token %} 
+                            {% for field in form %}
+                            <br>
+                            <h5 class="form-labels">
+                                {{ field.label }}
+                            </h5>
+                            {{ field }} 
+                            <br>
+                            {% endfor %}
+                            <center> <button type="submit" class=" add btn btn-danger btn-lg"> Select </button> </center>
+                        </form>
+                    </center>
+                    </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                <center>
+                    <div class="searchfood">
+                        <form method="get">
+                            <h1 class="headline text-center">{{ myFilter.form }}</h1>
+                            <center><button type="submit" class="btn btn-danger btn-lg"> Search </button></center>
+                        </form>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <br>
+        <h1 class="headline text-center"> All Food Items </h1>
+        <div class="row mt-5">
+            <table class="table text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Food Name</th>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for food in food_items %}
+                    <tr>
+                        <td>{{ food.name }}</td>
+                        <td>{{ food.calorie }}</td>
+                        <td>{{ food.quantity }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

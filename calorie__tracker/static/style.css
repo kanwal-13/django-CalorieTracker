@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script:wght@500&family=Playfair+Display:wght@500&family=Varela+Round&display=swap');
+
+.logo {
+    color: rgb(220, 20, 60);
+    font-family: 'Arvo', serif;
+    font-size: 5rem;
+}
+
+.navdiv {
+    font-family: 'Varela Round', sans-serif;
+    border-radius: 5rem;
+    height: 70px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: rgb(220, 20, 60);
+}
+
+.homepage {
+    color: rgb(220, 20, 60);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.7rem;
+    background-color: rgba(255,0,0,.1);
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    height: 110px;
+}
+
+.homepage h5 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.7rem;
+}
+
+.headline {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 3rem;
+    color: rgb(220, 20, 60);
+    margin: 1.5rem;
+}
+
+body {
+    background-color: rgba(255,0,0,.1);
+}
+
+th {
+    background: rgb(220, 20, 60);
+    background: linear-gradient(to right, rgb(220, 20, 60), rgb(128, 0, 0));
+    height: 70px
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+}
+
+.table {
+    background-color: rgba(255,0,0,.1);
+    color: rgb(220, 20, 60);
+    max-width: 100%;
+}
+
+tbody {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+}
+.login-form {
+    text-align: center;
+}
+
+.form-labels {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2rem;
+    margin: 5px;
+    padding: 5px;
+}
+
+.addfood {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgba(255,0,0,.1);
+    color: rgb(220, 20, 60);
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.searchfood {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgba(255,0,0,.1);
+    color: rgb(220, 20, 60);
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.add{
+    margin-left: 1.5rem;
+}
+
+.profile {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgba(255,0,0,.1);
+    color: rgb(220, 20, 60);
+    padding: 1.5rem;
+}
+
+.register{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgba(255,0,0,.1);
+    color: rgb(220, 20, 60);
+    padding: 2.5rem;
+    margin-left:10rem;
+    margin-right:10rem;
+    margin-bottom: 10rem;
+}

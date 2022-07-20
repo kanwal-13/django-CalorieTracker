@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container ">
+    <div class="row">
+      <div class="homepage col-sm text-center">
+        <h5> Total calories consumed today</h5>
+        <p> {{total_calorie}} </p>
+      </div>
+      <div class="homepage col-sm text-center">
+        <h5> Calorie Goal for today</h5>
+        <p> {{calorie_goal}} </p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="homepage col-sm text-center">
+        <h5> 
+            {% if calorie_goal_status > 0 %} 
+             You need {{ calorie_goal_status }} calories more to reach your goal 
+            {% elif calorie_goal == 0 %}
+            <a href={% url "profile" %}> Enter your calorie goal for the day  </a>
+            {% else %} 
+             You surpassed your goal by {{ over_calorie }} calories
+            {% endif %}
+        </h5>
+      </div>
+    </div>
+  </div>
+  <br>
+        <p class="headline text-center">All Food Consumed Today </p>
+        <div class="row mt-5">
+            <table class="table text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Food</th>
+                        <th scope="col">Calorie</th>
+                        <th scope="col">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for food in food_selected_today %}
+                    <tr>
+                        <td> {{ food.food.name }}</td>
+                        <td> {{ food.calorie_amount }}</td>
+                        <td> {{ food.amount }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}
